@@ -304,7 +304,7 @@ const ColorGuessingGame: React.FC = () => {
         width={300}
         height={300}
         onClick={handleCanvasClick}
-        className={`mx-auto rounded-full cursor-crosshair border-4 border-gray-200 shadow-inner transition-all duration-300 ${gameOver || showNextButton ? 'opacity-50 cursor-not-allowed' : ''}`}
+        className={`mx-auto rounded-full cursor-crosshair border-4 border-gray-200 shadow-inner transition-all duration-300 ${gameOver || showNextButton ? 'opacity-75 cursor-not-allowed' : ''}`}
       />
 
       <div className="mt-4">
@@ -370,14 +370,14 @@ const ColorGuessingGame: React.FC = () => {
               <tbody>
                 {leaderboard.slice(0, 10).map((entry, index) => (
                   <tr key={index} className="border-b">
-                    <td className="py-1 font-inter">{index + 1}</td>
-                    <td className="py-1 font-inter">
+                    <td className="py-1 font-inter font-semibold">{index + 1}</td>
+                    <td className="py-1 font-inter text-xl">
                       {index === 0 && '🥇 '}
                       {index === 1 && '🥈 '}
                       {index === 2 && '🥉 '}
                       {entry.displayName}
                     </td>
-                    <td className="py-1 font-inter">{entry.highScore}</td>
+                    <td className="py-1 font-inter font-bold">{entry.highScore}</td>
                   </tr>
                 ))}
               </tbody>
