@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Estedad';
+  src: url('./fonts/Estedad-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.font-estedad {
+  font-family: 'Estedad', sans-serif;
+}
+
 .font-press-start {
   font-family: 'Press Start 2P';
 }
